@@ -1,0 +1,5 @@
+We can improve the accuracy of the Classifier ( Current accuracy : 54% ) by incorporting the following changes-
+1)Consider phrases to get the context in which a word is used.
+	For example, "requires effort to implement" - would indicate a negative sentiment whereas "they are increasing efforts to" - would indicate a positive sentiment.
+2)Similarly, certain statements contain  oxymorons - "terribly nice", etc where taking the phrase as a whole would give more accuracy.
+3)Several tweets had both negative and positive words, wherein taking the context would yield better results.

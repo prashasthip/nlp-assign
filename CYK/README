@@ -1,0 +1,14 @@
+Directory Structure :
+
+Folder Part 1:
+	parse_train.counts.out = File consists of the modified counts
+	replace_rare_finaly.py = Program which replaces rare terminals with _RARE_
+
+FoLder Part 2:
+	parse_dev.out = File which consists of all the parse trees in JSON format for dev dataset
+	parse_test.p2.out = File which consists of all the parse trees in JSON format for testing dataset
+	eval.out = File which contains evaluation description of the decoder wrt to dev dataset
+	cky_final.py = Program which implements the cky algorithm and generates the best parse trees for a number of sentences
+
+Comments on the obtained evaluation description : 
+	We get precision of 0.810, recall of 0.783 and F1-Score of 0.796. These are not 1.0 due to conversion of rare words to _RARE_. Also we get precision,recall and f1-score as 0.0 for QP, since no tree for the training data uses any production rule with QP to derive the tree.

@@ -1,0 +1,17 @@
+{
+    "hmm": 
+            {
+                "A": {
+                   "Panel 1" : {"Panel 1": 0.65, "Panel 2": 0.35},
+                   "Panel 2" : {"Panel 1": 0.55, "Panel 2": 0.45}
+                   
+               },
+                "B": {
+                       "Panel 1" : {"Easy": 0.33, "Tough": 0.67},
+                       "Panel 2" : {"Easy": 0.67, "Tough": 0.33}
+                       
+                },
+                "pi": {"Panel 1": 0.67, "Panel 2": 0.33}        
+            }
+        
+}

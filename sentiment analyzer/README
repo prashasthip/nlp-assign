@@ -1,0 +1,25 @@
+FILE DESCRPITION : 
+
+classifier.py : Main program which creates the classifier and calculates the accuracy
+lex.py : Parses and cleans the text
+test.txt : File which contains the tweets to be tested
+training_tweets.txt : File which containg the training data
+test_sentiment : Manual labels for test.txt
+training_sentiment : Manual lables for training_tweets.txt
+performance.txt : Contains suggestion for improving the accuracy
+
+Command to run :
+python classifier.py
+
+Control flow :
+1. 'training_tweets.txt' is taken as an input, the lexer of PLY is used to tokenize the tweets and remove unnecessary data. The output of this
+stage is a list of lists. Each list is a group of words corresponding to one tweet.
+2. The output of the stage 1 is then pre-processed further to convert to lower case, remove stop words or words less than len(2) and lemmatized.
+The output of the stage is a list of lists.
+3. We compute the probability of each class and also segregate the list of lists into 3 sub-lists, each containing tweets belonging to that 
+sentiment. 
+4. We now proceed to calculate the likelihood for each word, for each class. The output of this stage is a dictionary. The key of the dictionary
+is a word and the value is a list of 3 elements which correspond to the probability of the word with respect to each sentiment (+ve, -ve, neutral)
+5. 'test.txt' is read and pre-processed as mentioned above. The output is a list of lists.
+6. The ouput of stage 5 is used to call function 'argmax' to calculate the most probable sentiment of the tweet.
+7. The accuracy is computed. 
